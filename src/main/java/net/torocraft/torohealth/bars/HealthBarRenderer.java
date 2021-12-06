@@ -142,7 +142,7 @@ public class HealthBarRenderer {
         Math.min(state.previousHealthDisplay, entity.getMaxHealth()) / entity.getMaxHealth();
     int zOffset = 0;
 
-    Matrix4f m4f = matrix.peek().getModel();
+    Matrix4f m4f = matrix.peek().getPositionMatrix();
     drawBar(m4f, x, y, width, 1, DARK_GRAY, zOffset++, inWorld);
     drawBar(m4f, x, y, width, percent2, color2, zOffset++, inWorld);
     drawBar(m4f, x, y, width, percent, color, zOffset, inWorld);
